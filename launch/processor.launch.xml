@@ -1,0 +1,4 @@
+<launch>
+<!-- https://docs.ros.org/en/humble/How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files.html -->
+    <node pkg="thermal_image_processing" exec="processor" name="algorithm_node" />
+</launch>
