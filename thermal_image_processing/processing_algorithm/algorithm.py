@@ -10,7 +10,7 @@ class ProcessingAlgorithm(object):
         super().__init__()
         # Get the path to the model file using ROS2's resource finding
         package_share_dir = get_package_share_directory('thermal_image_processing')
-        model_path = os.path.join(package_share_dir, 'resource', 'models', 'yolo11x-pose.pt')
+        model_path = os.path.join(package_share_dir, 'resource', 'models', 'yolo11x-pose.pt') # This is the finetuned version (not the checkpoint available from Ultralytics website)
         self.model = YOLO(model_path)
         
     def __call__(self, image):
